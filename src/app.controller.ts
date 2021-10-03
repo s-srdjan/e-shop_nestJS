@@ -5,8 +5,8 @@ import { Controller, Get } from '@nestjs/common';
 export class AppController {
   
   @Get()
-  getHello(): string {
-    return 'Hello world !';
+  getIndex(): string {
+    return 'Home page';
   }
 
   @Get('world')
