@@ -46,7 +46,9 @@ import { CategoryService } from './services/category/category.service';
     TypeOrmModule.forFeature([ 
       Administrator,
       Category,
-      Article
+      Article,
+      ArticlePrice,
+      ArticleFeature
     ])
   ],
   controllers: [
