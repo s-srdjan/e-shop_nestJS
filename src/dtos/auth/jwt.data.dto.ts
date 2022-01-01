@@ -1,7 +1,7 @@
 export class JwtDataDto {
     role: "administrator" | "user";
     id: number;
-    username: string;
+    identity: string;
     exp: number; // UNIX timestamp
     ip: string;
     ua: string;
@@ -10,7 +10,7 @@ export class JwtDataDto {
         return {
             role: this.role,
             id: this.id,
-            username: this.username,
+            identity: this.identity,
             exp: this.exp,
             ip: this.ip,
             ua: this.ua,
