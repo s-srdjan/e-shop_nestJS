@@ -105,7 +105,7 @@ export class AuthController {
     }
 
 
-    @Put('user/register') 
+    @Post('user/register') 
     async userRegister(@Body() data: UserRegistrationDto) {
         return await this.userService.register(data);
     }
