@@ -22,10 +22,10 @@ export class Cart {
   userId: number;
 
   @Column("timestamp", {
-    name: "created_id",
+    name: "created_at",
     default: () => "CURRENT_TIMESTAMP",
   })
-  createdId: Date;
+  createdAt: Date;
 
   @ManyToOne(() => User, (user) => user.carts, {
     onDelete: "RESTRICT",
