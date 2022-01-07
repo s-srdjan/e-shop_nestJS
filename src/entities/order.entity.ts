@@ -36,10 +36,10 @@ export class Order {
   @Validator.IsNotEmpty()
   @Validator.IsString()
   @Validator.IsIn(["rejected", "accepted", "shipped", "pending"])
-  status: "rejected" | "accepted" | "shipped" | "pending" | null;
+  status: "rejected" | "accepted" | "shipped" | "pending";
 
   @OneToOne(() => Cart, (cart) => cart.order, {
-    onDelete: "RESTRICT",
+    onDelete: "NO ACTION",
     onUpdate: "CASCADE",
   })
   @JoinColumn([{ name: "cart_id", referencedColumnName: "cartId" }])

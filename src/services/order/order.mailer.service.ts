@@ -21,7 +21,7 @@ export class OrderMailer {
     private makeOrderHtml(order: Order): string {
         let suma = order.cart.cartArticles.reduce((sum, current: CartArticle) => {
             return sum + 
-                   current.quantity +
+                   current.quantity *
                    current.article.articlePrices[current.article.articlePrices.length-1].price
         }, 0);
 
