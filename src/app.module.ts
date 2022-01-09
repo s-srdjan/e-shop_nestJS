@@ -22,6 +22,7 @@ import { CategoryController } from './controllers/api/category.controller';
 import { FeatureController } from './controllers/api/feature.controller';
 import { UserCartController } from './controllers/api/user.cart.controller';
 import { AppController } from './controllers/app.controller';
+import { UserToken } from './entities/user-token.entity';
 import { AuthMiddleware } from './middlewares/auth.middleware';
 import { AdministratorService } from './services/administrator/administrator.service';
 import { ArticleService } from './services/article/article.service';
@@ -54,6 +55,7 @@ import { UserService } from './services/user/user.service';
         Order,
         Photo,
         User,
+        UserToken,
       ]
     }),
     TypeOrmModule.forFeature([ 
@@ -68,6 +70,7 @@ import { UserService } from './services/user/user.service';
       Order,
       Photo,
       User,
+      UserToken,
     ]),
     MailerModule.forRoot({
       transport: 'smtps://' + MailConfig.username + ':' + 
