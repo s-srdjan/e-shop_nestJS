@@ -71,4 +71,11 @@ export class UserCartController {
         return order;
     }
 
+    @Get('orders')
+    @UseGuards(RoleCheckerGuard)
+    @AllowToRoles('user')
+    async getOrders(@Req() req: Request):  Promise<Order[]> {
+        return await this.orderService.getAllByUserId(req.token.id);
+    }
+
 }
